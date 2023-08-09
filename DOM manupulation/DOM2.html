@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-2</title>
+</head>
+<body>
+   <h1>Removing HTML Element</h1> 
+   <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+   </ul>
+   <script>
+    // Create Element and Adding Text
+    let var1 = document.createElement('h2')
+    var1.className = "title";
+    var1.style.fontSize = "30px"
+    var1.textContent = "Creating HTML Element"
+    document.body.appendChild(var1);
+
+    //  Removing Element contect
+    const ul = document.querySelector("ul");
+    console.log(ul);
+    const Lists = document.querySelectorAll('li');
+    console.log(Lists);
+    for(list of Lists){
+        ul.removeChild(list);
+    }
+   </script>
+</body>
+</html>

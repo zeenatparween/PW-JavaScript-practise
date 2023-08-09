@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorMixer</title>
+</head>
+<body>
+    <div id="main">
+    <h1>Color Mixer</h1>
+    <h3>choose color and Enter in boxes</h3>
+    <h5>["Red" , "Blue" , "Yellow" ]</h5>
+    <input id="str1"></input>
+    <input id="str2"></input>
+    <button id="button">Submit</button>
+    <h2 id="final-color"></h2>
+    </div>
+</body>
+<script>
+   let color1 = document.getElementById("str1")
+   let color2 = document.getElementById("str2")
+   let display = document.getElementById("final-color")
+   let button = document.getElementById("button")
+
+    button.addEventListener('click' , colorOutput)
+    function  colorOutput(){
+        color1 = document.getElementById("str1").value
+        color2 = document.getElementById("str2").value
+        final = document.getElementById("final-color")
+
+
+     if(color1 =="red" && color2 == "blue"){
+        final.innerText = `The Mixer of "${color1}" and  "${color2}" is Purple`
+        
+     }
+      else if(color1 == "red" && color2 == "yellow"){
+        final.innerText = `The Mixer of "${color1}" and "${color2}" is Orange`
+     }
+       else if(color1 == "blue" && color2 == "red"){
+        final.innerText = `The Mixer of "${color1}" and "${color2}" is Green`
+     }
+     else if(color1 == "blue" && color2 == "yellow"){
+        final.innerText = `The Mixer of "${color1}" and "${color2}" is Pink`
+     }
+     else if(color1 == "yellow" && color2 == "red"){
+        final.innerText = `The Mixer of "${color1}" and "${color2}" is Black`
+     }
+     else if(color1 == "yellow" && color2 == "blue"){
+        final.innerText = `The Mixer of "${color1}" and "${color2}" is Magenta`
+     }
+     else {
+        final.innerText = `Invalid Color Combination`
+     }
+     
+    }
+</script>
+</html>

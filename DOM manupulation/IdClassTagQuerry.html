@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Part1</title>
+</head>
+<body>
+    <!--Id  -->
+    <p id="one"><span>Hello</span>Namaste</p>
+    <!-- Class -->
+    <ul>
+        <li class="tech">One</li>
+        <li class="tech">Two</li>
+        <li class="tech">Three</li>
+    </ul>
+    <!-- tagName -->
+    <h4>Hey</h4>
+    <h4>namaste</h4>
+    <h4>Hola</h4>
+
+    <!-- Querry Selector -->
+    <h2>Hello</h2>
+    <h2 class="class">Hola</h2>
+    <h2 id="ids">Hey</h2>
+
+    <script>
+        // ID changes
+        let Idvalue  = document.getElementById("one")
+        console.log(Idvalue.innerText)
+        // class Changes
+        let var2 = document.getElementsByClassName('tech')
+        console.log(var2[2].innerText)
+        var2[1].innerText = "Node.js"
+        // TagName Changes
+        let var3 = document.getElementsByTagName("h4")
+        console.log(var3[1].innerText)
+        var3[2].innerText = 'Hellow PwSkills'
+        var3[2].style.color = "red"
+
+        // Querry Selector changes
+        let var4 = document.getElementsByClassName('class')
+        console.log(var4)
+        var4.className = "hello"
+        var4.classList = "hello zeenat hola"
+        // var4.setAttribute("title" , "anurag")
+        var4.setAttribute("title", "anurag");
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alculator</title>
+    <style>
+       .main{
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px 20px;
+        width: 450px;
+        height:300px;
+        display: flex;
+        flex-direction: column;
+        justify-content:left;
+        border: 2px solid black;
+        font-size: 20px;
+        background-color: rgb(223, 207, 207);
+       } 
+       input{
+        width: 250px;
+        height: 30px;
+        font-size: 20px;
+       }
+       button{
+        width:fit-content;
+        font-size: 20px;
+        padding: 5px;
+       }
+    </style>
+</head>
+<body>
+   <div class="main">
+     <label for="value1">Enter your First Number</label>
+    <input type="number" id="value1" name="value1">
+    <label for="value2">Enter your Second Number</label>
+    <input type="number" id="value2" name="value2"><br>
+    <span>
+        <label for="operation">Operater:</label>
+        <select name="operation" id="operation">
+            <option value="add" id="add">Addition</option>
+            <option value="sub" id="sub">Subtraction</option>
+            <option value="multi" id="multi">Multiplication</option>
+            <option value="divi" id="divi">Division</option>
+            <option value="modul" id="modul">Modulus</option>
+        </select>
+    </span><br>
+    <button class = calculate >Calculate</button>
+    <h2 id="result"></h2>
+   </div>
+   
+   <script>
+    let value1 = document.querySelector("#value1");
+    let value2 = document.querySelector("#value2");
+    let operator = document.querySelector("#operation");
+    let button = document.querySelector("#button");
+    let result = document.querySelector("#result");
+
+    button.addEventListener('click', 'ArithematicOperator');
+
+    function ArithematicOperator() {
+        let input1 = parseFloat(value1.value);
+        let input2 = parseFloat(value2.value);
+        let selectedOperator = operator.value;
+        let output;
+
+        switch(selectedOperator) {
+            case 'add':
+                output = input1 + input2;
+                result.innerText = String(output);
+                break;
+            case 'sub':
+                output = input1 - input2;
+                result.innerText = String(output);
+                break;
+            case 'multi':
+                output = input1 * input2;
+                result.innerText = String(output);
+                break;
+            case 'divi':
+                output = input1 / input2;
+                result.innerText = String(output);
+                break;
+            case 'modul':
+                output = input1 % input2;
+                result.innerText = String(output);
+                break;
+        }
+    }
+</script>
+   <!-- <script>
+    let  value1 = document.querySelector("#value1")
+    let  value2 = document.querySelector("#value2")
+    let  operator = document.querySelector("#operation")
+    let  button = document.querySelector("#button")
+
+
+       button.addEventListener('click' , ArithematicOperator)
+       function ArithematicOperator(){
+        value1 = document.querySelector("#value1").value
+        value2 = document.querySelector("#value2").value
+        operator = document.querySelector("#operation").value
+        result = document.querySelector("#result")
+       
+        
+         switch( operator){
+             case add:
+                 output =  value1 + value2;
+                  result.innerText = `${output}`
+                break
+             case sub:
+                 output =  value1 - value2;
+                 result.innerText = `${output}`
+                 break   
+             case multi:
+                 output =  value1 * value2;
+                 result.innerText = `${output}`
+                 break  
+             case divi:
+                 output =  value1 / value2;
+                 result.innerText = `${output}`
+                 break  
+             case modul:
+                 output =  value1 % value2;
+                 result.innerText = `${output}`
+                 break  
+         }
+      }
+
+   
+   </script> -->
+
+</body>
+
+</html>

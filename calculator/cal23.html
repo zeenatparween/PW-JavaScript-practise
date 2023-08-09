@@ -1,0 +1,39 @@
+<script>
+    let value1 = document.querySelector("#value1");
+    let value2 = document.querySelector("#value2");
+    let operator = document.querySelector("#operation");
+    let button = document.querySelector("#button");
+    let result = document.querySelector("#result");
+
+    button.addEventListener('click', 'ArithematicOperator');
+
+    function ArithematicOperator() {
+        let input1 = parseFloat(value1.value);
+        let input2 = parseFloat(value2.value);
+        let selectedOperator = operator.value;
+        let output;
+
+        switch(selectedOperator) {
+            case 'add':
+                output = input1 + input2;
+                result.innerText = String(output);
+                break;
+            case 'sub':
+                output = input1 - input2;
+                result.innerText = String(output);
+                break;
+            case 'multi':
+                output = input1 * input2;
+                result.innerText = String(output);
+                break;
+            case 'divi':
+                output = input1 / input2;
+                result.innerText = String(output);
+                break;
+            case 'modul':
+                output = input1 % input2;
+                result.innerText = String(output);
+                break;
+        }
+    }
+</script>
