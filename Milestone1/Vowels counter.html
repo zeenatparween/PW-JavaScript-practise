@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+</head>
+<body>
+     <h1>Check Vowels and Constant in Your Words</h1>
+    <label for="Letter">Enter Letters or Words</label>
+   <input type="text" name="Letter" id="Letter"> 
+   <h3 id="para"></h3>
+   <button id="check">Check From Here</button> 
+</body>
+<script>
+      let check = document.getElementById("check")
+     let VCLetter = document.getElementById("para")
+      check.addEventListener('click', CheckingVC)
+     function CheckingVC(){
+     let letters = document.getElementById("Letter").value
+     let string = letters[i].toLowerCase();
+    // let letters = prompt("Enter letters")
+     let count = 0;
+      for( let i=0; i<letters.length; i++){
+       let string = letters[i].toLowerCase();
+       if( string=='a' || string =='e' || string== 'i' || string=='o' || string=='u')
+       {
+        count++;
+       }
+       
+     }
+      let result = `Total Number of vowels is ${count}  and consonent is ${string.length-count}` 
+      VCLetter.innerText = "result"
+     }
+    // document.write("vowels:" ,count)
+    // document.write(" <br> string is :", letters)
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing text On button click</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        button{
+            display: flex;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+   <h1 id="heading">The Most affordable learning platform</h1> 
+   <button id="btn">Click Me</button>
+</body>
+<script>
+   let heading = document.getElementById("heading") 
+   let btn = document.getElementById("btn")
+    btn.addEventListener('click' , changetitle = () => {
+        heading.innerText = "PW Skills"
+        setTimeout(() => {
+           heading.innerText = "The Most affordable learning platform"
+   },1800);
+   
+     })
+   
+</script>
+</html>

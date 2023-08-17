@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="">
+    <label for="UserName">Name</label>
+    <input type="text" name="UName" id="UserName">
+    <p id="para"></p>
+    <button id="submit">Submit</button>
+   </form> 
+</body>
+<script>
+    let Submit = document.getElementById("submit")
+    Submit.addEventListener("click" , SubmitName)
+    function SubmitName(){
+    let para = document.getElementById("para")
+    let UserName = document.getElementById("UName").value
+    var firstCharChode = UserName.charCodeAt(0)
+    if(firstCharChode>=60 && firstCharChode<=90){
+         document.getElementById("para").innerText = ""
+    }
+    else{
+        let string = UserName[0].toUpperCase();
+        document.getElementById("UName").innerText = string;
+        
+
+    }
+    }
+</script>
+</html>
