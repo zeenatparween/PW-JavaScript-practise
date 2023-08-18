@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+            background-color: darkolivegreen;
+        }
+        .button-container{
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            
+            width:fit-content;
+            height:40px;
+            border-radius: 10px;
+            margin-right: 20px;
+            background-color:black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   <h1>The Greatest Warr</h1> 
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ad ipsa excepturi. Fugit, aliquid recusandae sapiente similique optio porro. A magnam explicabo, perferendis eos placeat possimus facere maxime error, quidem fugit est ratione vel, impedit quis consequatur. Quod, reprehenderit fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti necessitatibus sit nam quidem eius doloremque, voluptates id quis dignissimos. Accusantium.</p>
+   <div class="button-container">
+    <button id="btn" >ONCLICK</button>
+   <button id="Feedback">DOUBLECLICK</button>
+   <button id="surprise">MOUSEOVER</button>
+   <button id="coming">MOUSEOUT</button>  
+   <button id="inspirational">KEYPRESS</button>  
+   <button id="meet">KEYDOWN</button>
+   </div>
+
+   <script>
+    let button1 = document.getElementById("btn");
+    button1.addEventListener('click',btn );
+    let button2 = document.getElementById("Feedback");
+    button2.addEventListener('dblclick' ,Feedback )
+    let button3 = document.getElementById("surprise");
+    button3.addEventListener('mouseover', surprise );
+    let button4 = document.getElementById("coming");
+    button4.addEventListener('mouseout', coming );
+    let button5 = document.getElementById('inspirational');
+    button5.addEventListener('keypress', inspirational);
+    let button6 = document.getElementById("meet");
+    button6.addEventListener('keydown', meet);
+
+    function btn(){
+        document.getElementById('btn').style.background = "orange";
+        document.getElementById('btn').style.fontSize = "20px";
+        document.getElementById('btn').style.color = "black";
+        document.getElementById('btn').style.borderRadius = "2px soliddarkolivegreen";
+        document.getElementById('btn').style.boxShadow = "3px 3px 4px black, -3px -3px 4px black";
+
+
+    }
+   function Feedback(){ 
+        document.getElementById('Feedback').style.background = "red";
+        document.getElementById('Feedback').style.fontSize = "20px";
+        document.getElementById('Feedback').style.color = "black";
+        document.getElementById('Feedback').style.borderRadius = "2px soliddarkolivegreen";
+        document.getElementById('Feedback').style.boxShadow = "3px 3px 4px black , -3px -3px 4px black";
+   }
+   function surprise(){
+        document.getElementById('surprise').style.background = "purple";
+        document.getElementById('surprise').style.fontSize = "20px";
+        document.getElementById('surprise').style.color = "black";
+        document.getElementById('surprise').style.borderRadius = "2px soliddarkolivegreen";
+        document.getElementById('surprise').style.boxShadow = "3px 3px 4px black , -3px -3px 4px black";
+   }
+   function coming(){
+        document.getElementById('coming').style.background = "yellow";
+        document.getElementById('coming').style.fontSize = "20px";
+        document.getElementById('coming').style.color = "black";
+        document.getElementById('coming').style.borderRadius = "2px soliddarkolivegreen";
+        document.getElementById('coming').style.boxShadow = "3px 3px 4px black , -3px -3px 4px black";
+   }
+   function inspirational(){
+        document.getElementById('inspirational').style.background = "brown";
+        document.getElementById('inspirational').style.fontSize = "20px";
+        document.getElementById('inspirational').style.color = "black";
+        document.getElementById('inspirational').style.borderRadius = "2px soliddarkolivegreen";
+        document.getElementById('inspirational').style.boxShadow = "3px 3px 4px black, -3px -3px 4px black";
+   }
+   function meet (){
+        document.getElementById('meet').style.background = "cyan";
+        document.getElementById('meet').style.fontSize = "20px";
+        document.getElementById('meet').style.color = "black";
+        document.getElementById('meet').style.borderRadius = "2px soliddarkolivegreen";
+        document.getElementById('meet').style.boxShadow = "3px 3px 4px black , -3px -3px 4px black";
+   }
+   </script>
+</body>
+</html>
